@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -393,7 +392,7 @@ nav .links a:not(:last-child){display:none}
 <div class="tour-frame">
 <iframe src="https://tour.panoee.net/69f22499999f4bf32f1865f9" allowfullscreen loading="lazy" title="Atelier Noir virtual tour"></iframe>
 </div>
-<div class="tour-chip">Explore the room</div>
+<div class="tour-chip" onclick="openTour()">Explore the room</div>
 </div>
 </section>
 
@@ -503,6 +502,11 @@ const observer=new IntersectionObserver(entries=>{
 entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('show')});
 },{threshold:.15});
 reveals.forEach(el=>observer.observe(el));
+function openTour(){
+  window.open('https://tour.panoee.net/69f22499999f4bf32f1865f9','_blank');
+}
+
 </script>
 </body>
 </html>
+
