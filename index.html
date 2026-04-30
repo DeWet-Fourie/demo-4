@@ -264,6 +264,8 @@ background:linear-gradient(135deg,rgba(255,255,255,.13),transparent 28%,transpar
 }
 .tour-frame iframe{width:100%;height:100%;border:0;display:block}
 .tour-chip{
+text-decoration:none;
+cursor:pointer;
 position:absolute;
 right:7%;
 bottom:10%;
@@ -392,7 +394,7 @@ nav .links a:not(:last-child){display:none}
 <div class="tour-frame">
 <iframe src="https://tour.panoee.net/69f22499999f4bf32f1865f9" allowfullscreen loading="lazy" title="Atelier Noir virtual tour"></iframe>
 </div>
-<div class="tour-chip" onclick="openTour()">Explore the room</div>
+<a class="tour-chip" href="https://tour.panoee.net/69f22499999f4bf32f1865f9" target="_blank" rel="noopener">Explore the room</a>
 </div>
 </section>
 
@@ -502,11 +504,8 @@ const observer=new IntersectionObserver(entries=>{
 entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('show')});
 },{threshold:.15});
 reveals.forEach(el=>observer.observe(el));
-function openTour(){
-  window.open('https://tour.panoee.net/69f22499999f4bf32f1865f9','_blank');
-}
-
 </script>
 </body>
 </html>
+
 
